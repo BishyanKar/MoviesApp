@@ -98,7 +98,7 @@ class MoviePagedListAdapter(public val context: Context) : PagedListAdapter<Movi
 
     class MovieItemViewHolder(view : View) : RecyclerView.ViewHolder(view) {
 
-        fun bind(movie: Movie? ,context: Context){
+        fun bind(movie: Movie? , context: Context){
             itemView.list_item_title.text = movie?.title
             itemView.list_item_date.text = movie?.releaseDate
             val posterUrl = POSTER_BASE_URL + movie?.posterPath

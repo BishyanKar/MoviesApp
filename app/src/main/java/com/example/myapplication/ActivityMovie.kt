@@ -52,6 +52,9 @@ class ActivityMovie : AppCompatActivity() {
     private fun bindUI(movie : MovieDetails){
         binding.movieTitle.text = movie.title
         binding.movieSubtitle.text = movie.tagline
+        val details = "Release Date : ${movie.releaseDate} \n" + "Total Revenue : $ ${movie.revenue}\n"+"Runtime : ${movie.runtime} minutes\n"+"Total Votes : ${movie.voteCount}\n" + "Rating : ${movie.voteAverage} \n"
+        binding.movieDetails.text = details
+        binding.movieOverviews.text = movie.overview
 
         Glide.with(this)
             .load(POSTER_BASE_URL + movie.posterPath)
